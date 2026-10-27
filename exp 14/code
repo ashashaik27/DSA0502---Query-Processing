@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'A': [1, np.nan, 3, 4],
+    'B': [np.nan, 6, 7, np.nan],
+    'C': [9, 10, np.nan, 12] })
+
+df_filled = df.fillna(0)
+print(df_filled)
