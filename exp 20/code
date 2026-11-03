@@ -1,0 +1,10 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Text': ['Data Science', 'Python Programming', 'Machine Learning', 'Deep Learning']
+})
+substring = 'Learning'
+indices = df[df['Text'].str.contains(substring)].index
+
+print("Substring found at index:")
+print(indices.tolist())
