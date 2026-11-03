@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+x = [10, 20, 30, 40, 50]
+y1 = [20, 40, 10, 30, 20]
+y2 = [40, 10, 30, 20, 50]
+y3 = [10, 25, 45, 15, 35]
+
+plt.plot(x, y1, color='blue', linewidth=3, label='Line 1 (Thick)')
+plt.plot(x, y2, color='red', linewidth=5, label='Line 2 (Extra Thick)')
+plt.plot(x, y3, color='green', linewidth=1, label='Line 3 (Thin)')
+
+plt.xlabel('X- Axis')
+plt.ylabel('Y- Axis')
+plt.title('Multiple Lines with Different Widths and Colors')
+plt.legend()
+plt.grid(True)
+plt.show()
