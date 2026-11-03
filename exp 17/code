@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'School': ['S1', 'S1', 'S2', 'S2'],
+    'Age': [10, 12, 11, 13]
+})
+
+print("Original DataFrame:")
+print(df)
+
+result = df.groupby('School')['Age'].agg(['mean', 'min', 'max'])
+print("\nAge statistics by School:")
+print(result)
