@@ -1,0 +1,33 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from io import StringIO
+
+# 1. Sample Financial Data for Alphabet Inc. (GOOGL)
+csv_data = """Date,Open,High,Low,Close
+10-03-16,774.25,776.065002,769.5,772.559998
+10-04-16,776.030029,778.710022,772.890015,776.429993
+10-05-16,779.309998,782.070007,775.650024,776.469971
+10-06-16,779,780.47998,775.539978,776.859985
+10-07-16,779.659973,779.659973,770.75,775.080017"""
+
+# 2. Load data into DataFrame
+df_stock = pd.read_csv(StringIO(csv_data))
+
+# 3. Convert Date to datetime format and set as index
+df_stock['Date'] = pd.to_datetime(df_stock['Date'], format='%m-%d-%y')
+df_stock.set_index('Date', inplace=True)
+
+# 4. Create the line chart
+plt.figure(figsize=(10, 6))
+df_stock.plot(marker='o')
+
+# 5. Styling and Labels
+plt.title('Alphabet Inc. Stock Trends (Oct 3- Oct 7, 2016)', fontsize=14)
+plt.xlabel('Trading Date', fontsize=12)
+plt.ylabel('Price (USD)', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend(title="Price Metrics")
+
+# 6. Display output
+plt.tight_layout()
+plt.show()
