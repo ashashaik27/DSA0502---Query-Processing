@@ -1,0 +1,19 @@
+import pandas as pd
+
+data = {
+    'ID': [1, 2, 3, 4, 5],
+    'Product': ['LaPtoP', 'mObile', 'TaBLeT', 'Camera', 'Printer'],
+    'Description': ['High-END gAmING', 'SmARt PhoNe Xyz', 'Portable dEvice', 'HD ReCorDeR', 'Laser PRiNTer 101']
+}
+
+df = pd.DataFrame(data)
+column_to_swap = 'Product'
+
+print("### Original DataFrame ###")
+print(df)
+print("-" * 30)
+
+df['Swapped_Case_' + column_to_swap] = df[column_to_swap].str.swapcase()
+
+print("\n### DataFrame After Swapping Case in the '{}' column ###".format(column_to_swap))
+print(df[['ID', column_to_swap, 'Swapped_Case_' + column_to_swap]])
