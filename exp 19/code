@@ -1,0 +1,19 @@
+import pandas as pd
+import io
+
+# Sample data simulating the 'world_alcohol.csv' dataset
+csv_data = """Year,WHO region,Country,Beverage Types,Display Value
+1986,Western Pacific,Viet Nam,Wine,0
+1986,Americas,Uruguay,Other,0.5
+1985,Africa,Cote d'Ivoire,Wine,1.62
+1986,Americas,Colombia,Beer,4.27
+1987,Americas,Saint Kitts and Nevis,Beer,1.98
+"""
+
+# Load mock data to avoid FileNotFoundError
+df = pd.read_csv(io.StringIO(csv_data))
+
+print("Shape of the dataset:")
+print(df.shape)
+print("\nColumn names:")
+print(df.columns)
