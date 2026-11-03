@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt 
+
+#--- 1. Define Data--
+# X-coordinates (e.g., time, input values) 
+x_data = [1, 2, 3, 4, 5] 
+
+# Y-coordinates (e.g., measurements, output values)
+y_data = [2, 4, 6, 8, 10]
+
+#--- 2. Plot Data--
+plt.plot(x_data, y_data) 
+
+#--- 3. Add Labels and Title--
+plt.title("Simple Linear Relationship Plot") 
+plt.xlabel("X-Axis: Increasing Input Values") 
+plt.ylabel("Y-Axis: Doubled Output Values") 
+
+# Optional: Add grid for better readability 
+plt.grid(True) 
+
+#--- 4. Display Plot--
+plt.show()
