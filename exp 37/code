@@ -1,0 +1,12 @@
+import pandas as pd
+# 1. Define the sample data in a dictionary
+data = {
+'X': [78, 85, 96, 80, 86],
+'Y': [84, 94, 89, 83, 86],
+'Z': [86, 97, 96, 72, 83]
+}
+# 2. Create the DataFrame
+df = pd.DataFrame(data)
+# 3. Display the DataFrame
+print("The created DataFrame is:")
+print(df)
